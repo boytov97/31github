@@ -1,3 +1,3 @@
-export abstract class StrategyInterface {
-  public abstract execute(params: object): void;
+export abstract class StrategyInterface<T> {
+  public abstract execute(arg: T): number;
 }

@@ -3,10 +3,10 @@ import { SubscribedNewsletters } from "./filters/SubscribedNewsletters";
 import { CustomerRepository } from "./repositories/CustomerRepository";
 
 export const inlzChainOfResponsibility = async () => {
-  const chainIfFilters = new HasEmailFilter(new CustomerRepository());
-  chainIfFilters.setNext(new SubscribedNewsletters());
+  const chainOfFilters = new HasEmailFilter(new CustomerRepository());
+  chainOfFilters.setNext(new SubscribedNewsletters());
 
-  await chainIfFilters.handle({
+  await chainOfFilters.handle({
     type: "activate_your_account",
     reciever: {
       id: 1,

@@ -1,13 +1,13 @@
 import { StrategyInterface } from "./strategies/StrategyInterface";
 
 export class Context {
-  public constructor(protected strategy: StrategyInterface) {}
+  public constructor(protected strategy: StrategyInterface<number>) {}
 
-  public setStrategy(strategy: StrategyInterface): void {
+  public setStrategy(strategy: StrategyInterface<number>): void {
     this.strategy = strategy;
   }
 
-  public execute(params: object): void {
-    this.strategy.execute(params);
+  public convertPrice(value: number): number {
+    return this.strategy.execute(value);
   }
 }
