@@ -1,11 +1,13 @@
 //import { inlzChainOfResponsibility } from "./chain-of-responsibility";
-import { inlzStrategy } from "./strategy";
+import { inlzDecorator } from "./decorator";
+//import { inlzStrategy } from "./strategy";
 
 const _31github = async () => {
   console.log("Challenge | Growthhungry");
 
   //await inlzChainOfResponsibility();
-  await inlzStrategy();
+  //await inlzStrategy();
+  await inlzDecorator();
 
   return "Challenge | Growthhungry";
 };
