@@ -1,13 +1,12 @@
+import { Expose } from "class-transformer";
+
 export class ProductEntity {
+  @Expose()
   public id!: number;
 
+  @Expose()
   public title!: string;
 
+  @Expose()
   public price!: number;
-
-  public constructor(id: number, title: string, price: number) {
-    this.id = id;
-    this.title = title;
-    this.price = price;
-  }
 }

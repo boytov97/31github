@@ -1,18 +1,12 @@
-export enum DiscountType {
-  PERCENTAGE = "percentage",
-  FIXED_AMOUNT = "fixed_amount",
-}
+import { Expose } from "class-transformer";
 
 export class DiscountEntity {
+  @Expose({ name: "id" })
   public id!: number;
 
+  @Expose({ name: "code" })
   public code!: string;
 
-  public type!: DiscountType;
-
-  public constructor(id: number, code: string, type: DiscountType) {
-    this.id = id;
-    this.code = code;
-    this.type = type;
-  }
+  @Expose({ name: "value" })
+  public value!: number;
 }
