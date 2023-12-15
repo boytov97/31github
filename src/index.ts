@@ -4,6 +4,7 @@ import "reflect-metadata";
 //import { inlzStrategy } from "./strategy";
 //import { inlzApadter } from "./adapter";
 import { inlzObserver } from "./observer";
+import { inlzSingleton } from "./singleton/Index";
 
 const _31github = async () => {
   console.log("Challenge | Growthhungry");
@@ -12,7 +13,8 @@ const _31github = async () => {
   //await inlzStrategy();
   //await inlzDecorator();
   //await inlzApadter();
-  await inlzObserver();
+  //await inlzObserver();
+  await inlzSingleton();
 
   return "Challenge | Growthhungry";
 };
